@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MoodSelector } from './MoodSelector';
 import { QuestionInput } from './QuestionInput';
 import { CardDisplay } from './CardDisplay';

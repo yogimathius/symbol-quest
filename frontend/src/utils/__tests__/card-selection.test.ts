@@ -190,7 +190,7 @@ describe('card-selection', () => {
       expect(todaysCard).toEqual(mockCard);
     });
 
-    it('should return null for yesterday\\'s card', () => {
+    it('should return null for yesterday\'s card', () => {
       const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000).toDateString();
       const drawData = {
         card: { id: 0, name: 'The Fool' } as TarotCard,

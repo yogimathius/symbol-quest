@@ -1,0 +1,10 @@
+# Netlify redirects for single-page application
+# Redirect all routes to index.html for client-side routing
+
+/*    /index.html   200
+
+# Redirect HTTP to HTTPS
+https://symbolquest.netlify.app/* https://symbolquest.app/:splat 301!
+
+# API redirects (future backend integration)
+/api/*  https://api.symbolquest.app/api/:splat  200

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { TarotCard } from '../types/card';
 
 interface CardDisplayProps {

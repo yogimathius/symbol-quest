@@ -1,4 +1,4 @@
-import React from 'react';
+
 import type { Mood } from '../types/card';
 import { MOOD_OPTIONS } from '../hooks/useUserContext';
 
