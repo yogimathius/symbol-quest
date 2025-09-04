@@ -212,6 +212,10 @@ func (s *CardService) SaveEnhancedInterpretation(userID uuid.UUID, drawDate stri
 }
 
 func (s *CardService) checkUserLimits(userID uuid.UUID) (bool, error) {
+	if s.db == nil {
+		return false, errors.New("database connection is nil")
+	}
+	
 	var tier string
 	err := s.db.QueryRow("SELECT subscription_tier FROM users WHERE id = $1", userID).Scan(&tier)
 

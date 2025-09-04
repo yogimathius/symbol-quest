@@ -32,12 +32,19 @@ export function useCardDraw(): UseCardDrawReturn {
             const card: TarotCard = {
               id: status.card.id,
               name: status.card.name,
+              number: status.card.number || '0',
               // Map the API response to TarotCard format
               keywords: [],
+              archetypes: [],
               elements: [],
+              astrology: '',
               traditionalMeaning: status.card.traditional_meaning || '',
-              imageUrl: '',
-              description: status.card.traditional_meaning || '',
+              shadowAspects: [],
+              lightAspects: [],
+              imageryDescription: '',
+              colors: [],
+              symbols: [],
+              moodWeights: {},
             };
             setTodaysCard(card);
             setSelectedCard(card);
@@ -112,11 +119,18 @@ export function useCardDraw(): UseCardDrawReturn {
             const card: TarotCard = {
               id: response.card.card_id,
               name: response.card.card_name,
+              number: response.card.number || '0',
               keywords: [],
+              archetypes: [],
               elements: [],
+              astrology: '',
               traditionalMeaning: response.card.interpretation_basic || '',
-              imageUrl: '',
-              description: response.card.interpretation_basic || '',
+              shadowAspects: [],
+              lightAspects: [],
+              imageryDescription: '',
+              colors: [],
+              symbols: [],
+              moodWeights: {},
             };
             
             setSelectedCard(card);

@@ -169,26 +169,18 @@ func TestErrorHandling(t *testing.T) {
 
 	t.Run("NilDatabase", func(t *testing.T) {
 		// Most database operations should handle nil gracefully or return appropriate errors
-		defer func() {
-			if r := recover(); r == nil {
-				t.Error("Expected panic or error when database is nil")
-			}
-		}()
-		
-		// This will panic with nil database
-		service.checkUserLimits(uuid.New())
+		_, err := service.checkUserLimits(uuid.New())
+		if err == nil {
+			t.Error("Expected error when database is nil")
+		}
 	})
 
 	t.Run("InvalidUUID", func(t *testing.T) {
-		// Test with zero UUID - will also panic with nil DB
-		defer func() {
-			if r := recover(); r == nil {
-				t.Error("Expected panic with zero UUID and nil database")
-			}
-		}()
-		
-		zeroUUID := uuid.UUID{}
-		service.checkUserLimits(zeroUUID)
+		// Test with zero UUID - should return error due to nil database
+		_, err := service.checkUserLimits(uuid.UUID{})
+		if err == nil {
+			t.Error("Expected error with zero UUID and nil database")
+		}
 	})
 }
 

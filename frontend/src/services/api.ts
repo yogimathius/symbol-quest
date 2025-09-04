@@ -1,11 +1,14 @@
-import type { TarotCard, UserContext } from '../types/card';
+import type { TarotCard } from '../types/card';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 
 class APIError extends Error {
-  constructor(message: string, public status?: number) {
+  public status?: number;
+  
+  constructor(message: string, status?: number) {
     super(message);
     this.name = 'APIError';
+    this.status = status;
   }
 }
 
