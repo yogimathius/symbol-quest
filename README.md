@@ -198,6 +198,26 @@ GET /health                     # Service health
 |---------|------|----------------------|
 | Daily Draws | 1 per day | Unlimited |
 | Interpretations | Basic meanings | AI-enhanced personalized |
+
+## Current Status
+
+- Documentation claims a production-ready full-stack app.
+- Implementation and deployment status not verified in this audit.
+- Operational estimate: **60%** (feature-rich stack, unverified integration).
+
+## Needstophat Rationale
+
+- Marked `_needstophat` likely because it needs real-world validation, QA, and production hardening.
+
+## Tests
+
+- Not detected or not run in this audit.
+
+## Future Work
+
+- Validate backend routes, Stripe flows, and AI interpretation pipeline.
+- Add automated tests for API and UI.
+- Verify deployment scripts and environment handling.
 | History | Last 7 days | Unlimited |
 | Support | Community | Priority |
 
