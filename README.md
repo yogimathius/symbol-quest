@@ -42,6 +42,3 @@
 - Validate runtime claims in this README against current behavior and deployment configuration
 - Finish polish, reliability hardening, and release-readiness checks before broader rollout
 
-## Source of Truth
-- This README is intended to be the canonical project summary for portfolio alignment.
-- If portfolio copy diverges from this file, update the portfolio entry to match current implementation reality.
