@@ -2,17 +2,16 @@
 
 > **Launch Status: 🚀 PRODUCTION READY** > Complete tarot card reading application with Go backend, React frontend, AI interpretations, and Stripe payments.
 
-## Scope and Direction
-- Project path: `_needstophat/symbol-quest`
-- Primary tech profile: Go, Node.js/TypeScript or JavaScript
-- Audit date: `2026-02-08`
+## Purpose
+- > **Launch Status: 🚀 PRODUCTION READY** > Complete tarot card reading application with Go backend, React frontend, AI interpretations, and Stripe payments.
+- Last structured review: `2026-02-08`
 
-## What Appears Implemented
+## Current Implementation
 - Detected major components: `backend/`, `frontend/`
 - Source files contain API/controller routing signals
 - Go module metadata is present for one or more components
 
-## API Endpoints
+## Interfaces
 - Direct route strings detected:
 - `/health`
 - `/test-error`
@@ -25,20 +24,24 @@
 - `/register`
 - `/login`
 
-## Testing Status
+## Testing and Verification
 - `frontend` package has test scripts: `test`, `test:ui`, `test:coverage`
 - `go test ./...` appears applicable for Go components
-- This audit did not assume tests are passing unless explicitly re-run and captured in this session
+- Tests are listed here as available commands; rerun before release to confirm current behavior.
 
-## Operational Assessment
+## Current Status
 - Estimated operational coverage: **54%**
 - Confidence level: **medium-high**
 
-## Bucket Rationale
-- This project sits in `_needstophat`, indicating core ideas are present but reliability, UX polish, and release hardening are still needed.
+## Stability Notes
+- This repository is tracked in `_needstophat`, meaning the core product is present but release hardening is still required.
 
-## Future Work
+## Next Steps
 - Consolidate and document endpoint contracts with examples and expected payloads
 - Run the detected tests in CI and track flakiness, duration, and coverage
 - Validate runtime claims in this README against current behavior and deployment configuration
 - Finish polish, reliability hardening, and release-readiness checks before broader rollout
+
+## Source of Truth
+- This README is intended to be the canonical project summary for portfolio alignment.
+- If portfolio copy diverges from this file, update the portfolio entry to match current implementation reality.
